@@ -1,5 +1,13 @@
 import React from "react";
-import { address, brandEmail, brandName, facebook, instagram, phoneNumber, youtube } from "../Data/BrandData";
+import {
+  address,
+  brandEmail,
+  brandName,
+  facebook,
+  instagram,
+  phoneNumber,
+  youtube,
+} from "../Data/BrandData";
 import { Link } from "react-router";
 
 const YogaFooter = () => {

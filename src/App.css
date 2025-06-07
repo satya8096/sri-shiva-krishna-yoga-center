@@ -1740,7 +1740,7 @@ form button:hover {
 
 /* Responsive */
 @media (max-width: 767px) {
-  .carousel-btn{
+  .carousel-btn {
     margin: 0rem;
   }
   .carousel-card {

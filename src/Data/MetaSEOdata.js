@@ -35,7 +35,7 @@ export const homeMetaData = (
     />
     <meta property="og:url" content="https://yourdomain.com/" />
     <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="${brandName}" />
+    <meta property="og:site_name" content={`${brandName}`} />
 
     {/* Twitter */}
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,8 +51,6 @@ export const homeMetaData = (
       name="twitter:image"
       content="https://yourdomain.com/assets/yoga-banner.jpg"
     />
-    {/* <link rel="icon" href="/favicon.ico" />
-    <link rel="canonical" href="https://yourdomain.com/" /> */}
   </Helmet>
 );
 

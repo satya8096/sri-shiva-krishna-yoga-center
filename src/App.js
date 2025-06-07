@@ -1,37 +1,56 @@
 import { Route, Routes, useLocation } from "react-router";
-import Home from "./Pages/Home";
+import { Suspense, lazy, useEffect } from "react";
 import "./App.css";
+
+// Components
 import Navbar from "./Components/NavBar";
 import YogaFooter from "./Components/Footer";
-import About from "./Pages/About";
-import Classes from "./Pages/Classes";
-import ContactPage from "./Pages/Contact";
-import YogaGallery from "./Pages/Gallery";
-import BlogList from "./Pages/Blogs";
-import BlogDetails from "./Pages/BlogDetail";
 import FloatingButtons from "./Components/TopAndWhatsappBtn";
-import { useEffect } from "react";
-import NotFound from "./Components/Error404";
+
+// Lazy Loaded Pages
+const Home = lazy(() => import("./Pages/Home"));
+const About = lazy(() => import("./Pages/About"));
+const Classes = lazy(() => import("./Pages/Classes"));
+const ContactPage = lazy(() => import("./Pages/Contact"));
+const YogaGallery = lazy(() => import("./Pages/Gallery"));
+const BlogList = lazy(() => import("./Pages/Blogs"));
+const BlogDetails = lazy(() => import("./Pages/BlogDetail"));
+const NotFound = lazy(() => import("./Components/Error404"));
 
 function App() {
-  const Location = useLocation().pathname;
+  const location = useLocation().pathname;
+
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [Location]);
+  }, [location]);
+
   return (
     <div className="App">
       <Navbar />
       <FloatingButtons />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/classes" element={<Classes />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/blogs" element={<BlogList />} />
-        <Route path="/blogs/:slug" element={<BlogDetails />} />
-        <Route path="/gallery" element={<YogaGallery />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <Suspense
+        fallback={
+          <div className="loader-wrapper">
+            <div
+              className="spinner-border"
+              style={{ width: "3rem", height: "3rem" }}
+              role="status"
+            ></div>
+            <span className="mt-3">Loading...</span>
+          </div>
+        }
+      >
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/classes" element={<Classes />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/blogs" element={<BlogList />} />
+          <Route path="/blogs/:slug" element={<BlogDetails />} />
+          <Route path="/gallery" element={<YogaGallery />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
       <YogaFooter />
     </div>
   );

@@ -23,7 +23,7 @@ const Navbar = () => {
         className="container d-flex flex-column align-items-center"
         data-aos="fade-down"
       >
-        <a className="navbar-brand text-white fw-bold mb-1" href="#">
+        <a className="navbar-brand text-white fw-bold mb-1" href="/">
           <i className="fas fa-spa me-2"></i>Sri Siva Rama Krishna Yoga Center
         </a>
 
