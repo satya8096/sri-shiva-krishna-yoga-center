@@ -1,0 +1,1763 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Acme&family=Sue+Ellen+Francisco&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Ancizar+Sans:ital,wght@0,100..1000;1,100..1000&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+p,
+span,
+input,
+button,
+textarea,
+a,
+th,
+td,
+li,
+div,
+caption,
+label {
+  /* font-family: "Josefin Sans", sans-serif; */
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 1.05rem;
+  font-style: normal;
+  line-height: 2rem;
+  /* word-spacing: 1.8px; */
+  letter-spacing: 1px;
+  /* font-family: "Sue Ellen Francisco", cursive; */
+  font-family: "Ancizar Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  letter-spacing: 1.15px;
+  font-variation-settings: "wdth" 100, "YTLC" 500;
+  /* font-family: "Acme", sans-serif; */
+  word-spacing: 0.1rem;
+  line-height: 2rem;
+  word-spacing: 0.2rem;
+  /* font-size: 1.2rem; */
+  /* color: #1e702f; */
+  font-family: "Ancizar Sans", sans-serif;
+}
+
+/* Loader */
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #d5f79f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.scissors-loader {
+  font-size: 4rem;
+  color: #ff69b4;
+  animation: rotate 1.2s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader-wrapper p {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.navbar-scrolled {
+  background: linear-gradient(to right, #1d2b64, #f8cdda);
+}
+.navbar-yoga {
+  padding: 0.4rem 0;
+  z-index: 999;
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #fbd786 !important;
+  border-bottom: 2px solid #fbd786;
+}
+
+.btn-join-now {
+  background: #fbd786;
+  border: none;
+  border-radius: 25px;
+  color: #1d1d1d;
+  transition: background 0.3s ease;
+}
+
+.btn-join-now:hover {
+  background: #f7797d;
+  color: white;
+}
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .navbar-yoga {
+    background: linear-gradient(to right, #1d2b64, #f8cdda);
+  }
+  .navbar-brand {
+    font-size: 1rem;
+  }
+
+  .navbar-nav {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}
+
+.hero-section {
+  position: relative;
+  /* height: 100vh; */
+  padding: 13rem 1rem;
+  /* background: url("https://img.freepik.com/premium-photo/young-woman-practice-asana-sportive-woman-practicing-yoga-pose-standing-green-park-bright-summer-day-healthy-lifestyle_175682-2038.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&w=740")
+    center/cover no-repeat; */
+  background: url("./Assets/img8.jpeg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.662);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 2rem;
+}
+
+/* .hero-title {
+  font-size: 2.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #e0e0e0;
+} */
+
+.hero-buttons .btn {
+  margin: 0 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary {
+  background: #fbd786;
+  color: #1d1d1d;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #f7797d;
+  color: #fff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 2px solid #fbd786;
+  color: #fbd786;
+}
+
+.btn-outline:hover {
+  background: #fbd786;
+  color: #1d1d1d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /* .hero-title {
+    font-size: 2.2rem;
+  } */
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+  .hero-buttons .btn {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+}
+
+.about-section {
+  background: #fefefe;
+}
+
+.text-gradient {
+  background: linear-gradient(45deg, #9c27b0, #ff4081);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #3b2e58;
+  background: linear-gradient(90deg, #8e2de2, #4a00e0);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.schedule-table thead {
+  background-color: #6f42c1;
+  color: white;
+}
+
+.schedule-table tbody tr:hover {
+  background-color: #f8f9fa;
+  transform: scale(1.01);
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-outline-success {
+  border-color: #28a745;
+  color: #28a745;
+}
+
+.btn-outline-success:hover {
+  background-color: #28a745;
+  color: white;
+}
+
+/* ========== Services Section ========== */
+.services-section {
+  padding: 40px 30px;
+  border-radius: 20px;
+}
+
+.section-heading {
+  /* font-size: 2.4rem; */
+  /* font-weight: 700; */
+  color: #2b6777;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.section-heading::after {
+  content: "";
+  width: 70px;
+  height: 4px;
+  background: #52ab98;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.services-section .section-subtext {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.services-section .service-card {
+  background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+  border-radius: 16px;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-section .service-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(82, 171, 152, 0.3);
+}
+
+.services-section .service-card .icon-style {
+  font-size: 2.8rem;
+  color: #52ab98;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.services-section .service-card:hover .icon-style {
+  color: #2b6777;
+}
+
+.services-section .service-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #2b6777;
+  margin-bottom: 10px;
+}
+
+.services-section .service-desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* ========== Class Schedule Section ========== */
+.schedule-section {
+  /* background: #f8fafa; */
+  padding: 60px 30px;
+  border-radius: 20px;
+  /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
+}
+
+/* Home Gallery */
+.explore-section {
+  /* background: linear-gradient(to bottom right, #f7f3f3, #fff); */
+  padding: 80px 20px;
+  text-align: center;
+}
+
+/* .container {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+.explore-title {
+  font-size: 2.8rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.explore-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 0 10px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 12px;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.08);
+}
+
+.see-more-btn {
+  margin-top: 40px;
+  background-color: #6d28d9;
+  color: #fff;
+  border: none;
+  padding: 12px 28px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.see-more-btn:hover {
+  background-color: #5b21b6;
+}
+
+.schedule-section .schedule-row:nth-child(even) {
+  background-color: #f2f6f6;
+}
+
+.schedule-section .schedule-row:hover {
+  background-color: #e9f9f6;
+}
+
+.schedule-section .reserve-btn {
+  background-color: #52ab98;
+  color: #fff;
+  border: none;
+  padding: 7px 16px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-section .reserve-btn:hover {
+  background-color: #2b6777;
+}
+
+/* === Benefits of Yoga Section === */
+.yoga-benefits-section {
+  padding: 30px 0;
+  background: linear-gradient(145deg, #f0ffe0, #d8fdd1);
+  text-align: center;
+  border-radius: 40px 40px 0 0;
+}
+
+.yoga-benefits-section .section-title {
+  font-size: 36px;
+  color: #2f4f4f;
+  font-weight: bold;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.yoga-benefits-section .benefits-grid {
+  gap: 30px;
+}
+
+.yoga-benefits-section .benefit-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.yoga-benefits-section .benefit-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+}
+
+.yoga-benefits-section .benefit-icon {
+  font-size: 40px;
+  color: #50c878;
+  margin-bottom: 20px;
+}
+
+.benefits-section {
+  position: relative;
+  padding: 6rem 2rem;
+  background: #f9f9f9;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.bg-shape-1,
+.bg-shape-2 {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffe9b1, #fbc2eb);
+  z-index: 0;
+  opacity: 0.3;
+}
+
+.bg-shape-1 {
+  top: -50px;
+  left: -80px;
+}
+
+.bg-shape-2 {
+  bottom: -60px;
+  right: -70px;
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+.benefit-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-10px);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  color: #f97316;
+  margin-bottom: 1rem;
+}
+
+.benefit-card h4 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+  color: #111827;
+}
+
+.benefit-card p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+  }
+}
+
+/* === Testimonials Section === */
+.testimonial-carousel-section {
+  padding: 80px 4px;
+  text-align: center;
+}
+
+.carousel-container {
+  /* max-width: 800px; */
+  margin: auto;
+}
+
+.carousel-title {
+  font-size: 2.2rem;
+  color: #6a1b9a;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.carousel-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.carousel-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  width: 60%;
+  transition: all 0.5s ease;
+}
+
+.user-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.user-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #4a148c;
+  margin-bottom: 8px;
+}
+
+.stars {
+  color: #fdd835;
+  margin-bottom: 12px;
+}
+
+.stars .fa-star {
+  margin: 0 2px;
+  font-size: 1rem;
+  opacity: 0.3;
+}
+
+.stars .fa-star.filled {
+  opacity: 1;
+}
+
+.user-review {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.5;
+  margin-top: 10px;
+}
+
+.carousel-btn {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #6a1b9a;
+  cursor: pointer;
+  padding: 0 20px;
+  transition: 0.3s;
+  border: 2px solid black;
+  border-radius: 100%;
+  width: 3rem;
+  height: 3rem;
+  margin: 1rem;
+}
+
+.carousel-btn:hover {
+  color: #4a148c;
+}
+
+.join-section {
+  background: linear-gradient(to right, #dcedc8, #c8e6c9);
+  padding: 60px 20px;
+  text-align: center;
+}
+.join-section .join-content h2 {
+  font-size: 2.2rem;
+  color: #33691e;
+}
+.join-section .join-content p {
+  margin: 15px 0;
+  font-size: 1.1rem;
+}
+.btn-join {
+  padding: 12px 30px;
+  background-color: #43a047;
+  color: #fff;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+.btn-join:hover {
+  background-color: #2e7d32;
+}
+
+.blog-section {
+  background: linear-gradient(120deg, #ede7f6, #f3e5f5);
+  padding: 60px 20px;
+}
+.blog-section .blog-header h2 {
+  text-align: center;
+  color: #6a1b9a;
+  font-size: 2.3rem;
+}
+.blog-section .blog-grid {
+  margin-top: 40px;
+}
+.blog-card {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s;
+}
+.blog-card h3 {
+  color: #7b1fa2;
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+.blog-card p {
+  color: #555;
+  font-size: 0.95rem;
+  margin-top: 8px;
+}
+
+/* =========About Page Styles========= */
+.about-us-page {
+  color: #333;
+}
+
+/* Hero Section */
+.about-hero,
+.classes-hero,
+.gallery-hero,
+.blog-detail-hero {
+  background: url("https://img.freepik.com/premium-photo/smiling-girl-professional-yoga-instructor-is-doing-balancing-exercises-standing-one-leg-mat-grass-park-beautiful-autumn-nature-is-visible_662046-2695.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
+    center/cover no-repeat;
+  padding: 10rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Who We Are Section */
+.who-we-are {
+  padding: 80px 20px;
+  flex-wrap: wrap;
+}
+
+.who-we-are-section {
+  width: 30rem;
+}
+
+.image-section img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.text-section {
+  flex: 1;
+  min-width: 300px;
+}
+
+.text-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #6a1b9a;
+}
+
+.text-section p {
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Mission and Vision */
+.mission-vision {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #e1bee7, #ede7f6);
+  color: #4a148c;
+}
+
+.mission-vision .block {
+  max-width: 500px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.mission-vision .block h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+}
+
+.mission-vision .block p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .who-we-are .container {
+    flex-direction: column;
+  }
+}
+
+.cta-section {
+  background: linear-gradient(135deg, #6a1b9a, #ab47bc);
+  padding: 80px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  animation: float 6s infinite ease-in-out;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: auto;
+  z-index: 2;
+  position: relative;
+}
+
+.cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: white;
+  color: #6a1b9a;
+  padding: 14px 30px;
+  font-weight: bold;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.cta-btn:hover {
+  background: #f3e5f5;
+  color: #4a148c;
+}
+
+/* ======== Services Page ======== */
+
+.section-subtext {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+/* ======= Classes Page style ======== */
+.classes-hero {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.248),
+      rgba(0, 0, 0, 0.281)
+    ),
+    url("https://img.freepik.com/free-photo/yoga-action-exercise-healthy-park_1150-4422.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
+      center/cover no-repeat;
+  /* background-attachment: fixed; */
+}
+.live-schedule-section {
+  max-width: 1000px;
+  margin: 6rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.schedule-heading {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+}
+
+.schedule-subtext {
+  font-size: 1.1rem;
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.schedule-table {
+  display: grid;
+  gap: 1rem;
+  overflow: auto;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1.5fr 1.5fr 1fr;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.table-header {
+  background-color: #f7f9fc;
+  font-weight: bold;
+  color: #34495e;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border: 2px solid black;
+}
+
+.table-header div {
+  padding: 0rem 2rem;
+}
+.table-row {
+  background-color: #ffffff;
+  border: 1px solid #eee;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.table-row:hover {
+  background-color: #f0f8ff;
+  /* transform: translateY(-2px); */
+}
+.table-row div {
+  padding: 0rem 1rem;
+}
+
+.book-btn {
+  padding: 8px 16px;
+  background-color: #5a8dee;
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.book-btn:hover {
+  background-color: #3366cc;
+}
+
+/*=========== Contact Page styles ===========*/
+.contact-header,
+.blog-header {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.248),
+      rgba(0, 0, 0, 0.281)
+    ),
+    url("https://img.freepik.com/premium-photo/young-girls-yoga-outdoors-park-sunset-healthy-lifestyle_180601-1447.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
+      center/cover no-repeat;
+  color: white;
+  padding: 10rem 1rem;
+  text-align: center;
+}
+.blog-header {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.248),
+      rgba(0, 0, 0, 0.281)
+    ),
+    url("https://img.freepik.com/premium-photo/beautiful-young-woman-practices-yoga-beach-early-morning-exercise-drinking-water-sunrise_179755-6211.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
+      center/cover no-repeat;
+}
+
+.contact-header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 3rem auto;
+  /* padding: 0 2rem; */
+  flex-wrap: wrap;
+}
+
+.contact-info,
+.contact-form {
+  width: 40%;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.contact-info h2,
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.info-item {
+  margin-bottom: 1.2rem;
+}
+
+.info-item strong {
+  display: block;
+  margin-bottom: 0.3rem;
+  color: #6d28d9;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+form button {
+  background: #6d28d9;
+  color: white;
+  padding: 0.2rem 2rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #5b21b6;
+}
+
+.map-section {
+  margin: 4rem 0;
+  text-align: center;
+}
+
+.map-section h2 {
+  margin-bottom: 1rem;
+}
+
+.map-container {
+  max-width: 95%;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    grid-template-columns: 1fr;
+  }
+}
+.social-media-section {
+  text-align: center;
+  padding: 60px 20px;
+  /* background: #f4f4f9; */
+}
+
+.social-title {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.social-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: var(--clr);
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ======== Home Blogs Section ========= */
+.blog-section {
+  padding: 80px 20px;
+  background: #faf5ff;
+  text-align: center;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #4a148c;
+}
+
+.section-subtitle {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.blog-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.blog-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  width: 22rem;
+  margin: 1.3rem 0rem;
+}
+
+/* .blog-card:hover {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+} */
+
+.blog-image {
+  position: relative;
+  height: 180px;
+  overflow: hidden;
+}
+
+.blog-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: scale 0.3s ease;
+}
+
+.blog-card:hover img {
+  scale: 1.05;
+}
+
+.blog-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #8e24aa;
+  color: white;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-date {
+  font-size: 0.8rem;
+  color: #999;
+  margin-bottom: 8px;
+}
+
+.blog-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.blog-excerpt {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.view-more-btn {
+  padding: 10px 30px;
+  background-color: #8e24aa;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.view-more-btn:hover {
+  background-color: #6a1b9a;
+}
+
+/* Gallery Page Styles */
+.gallery-hero {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.248),
+      rgba(0, 0, 0, 0.281)
+    ),
+    url("https://img.freepik.com/premium-photo/young-latina-woman-yoga-position-stretching-spirituality-practice_678765-530.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
+      center/cover no-repeat;
+}
+.yoga-gallery-section {
+  padding: 80px 20px;
+  margin-top: 9rem;
+  background: #fff;
+  text-align: center;
+}
+
+.gallery-title {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 50px;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.gallery-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.gallery-card:hover .gallery-img {
+  transform: scale(1.1);
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 60%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+}
+
+.gallery-card:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay h4 {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.blog-list-section {
+  padding: 80px 20px;
+  background: #fdfdfd;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #7f8c8d;
+}
+
+/* .blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+} */
+
+.blog-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 10px 0;
+  color: #2c3e50;
+}
+
+.blog-intro {
+  font-size: 1rem;
+  color: #555;
+  flex-grow: 1;
+}
+
+.blog-tags {
+  margin: 15px 0;
+}
+
+.blog-tag {
+  background: #e0f7fa;
+  color: #00796b;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  border-radius: 30px;
+  margin-right: 5px;
+}
+
+.blog-date {
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.read-more-btn {
+  text-align: right;
+  font-weight: 500;
+  margin-top: 15px;
+  color: #3498db;
+  text-decoration: none;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.center-btn {
+  margin-top: 40px;
+}
+
+.view-more-btn {
+  padding: 12px 30px;
+  background: #2ecc71;
+  color: #fff;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.view-more-btn:hover {
+  background: #27ae60;
+}
+.blog-detail-hero {
+  background: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.248),
+      rgba(0, 0, 0, 0.281)
+    ),
+    url("https://img.freepik.com/free-photo/woman-yoga-mat-relax-park-mountain-lake-calm-woman-with-closed-eyes-practicing-yoga-sitting-padmasana-pose-mat-lotus-exercise-attractive-sporty-girl-sportswear_1150-44679.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
+      center/cover no-repeat;
+}
+.blog-detail-container {
+  max-width: 900px;
+  margin: auto;
+  padding: 60px 20px;
+  color: #2c3e50;
+  line-height: 1.7;
+  background: #fff;
+  margin-top: 6rem;
+}
+
+.blog-detail-header {
+  text-align: center;
+}
+
+.blog-detail-image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.blog-detail-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.blog-detail-date {
+  font-size: 1rem;
+  color: #888;
+  margin: 10px 0;
+}
+
+.blog-detail-tags {
+  margin-top: 10px;
+}
+
+.blog-tag {
+  background-color: #ecf0f1;
+  color: #555;
+  padding: 6px 12px;
+  margin: 5px;
+  display: inline-block;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+.blog-detail-content {
+  margin-top: 40px;
+}
+
+.blog-section {
+  margin-bottom: 40px;
+}
+
+.blog-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.blog-section ul {
+  margin-left: 20px;
+  list-style: disc;
+}
+
+.blog-section li {
+  margin-bottom: 10px;
+}
+
+.back-to-blog {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* ========== Footer Style ========= */
+
+.yoga-footer {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+  /* font-family: "Segoe UI", sans-serif; */
+  text-align: left;
+}
+
+.yoga-footer .footer-section h5 {
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.yoga-footer .footer-section ul li {
+  margin-bottom: 8px;
+}
+
+.yoga-footer .footer-section ul li a {
+  text-decoration: none;
+  color: #cccccc;
+  transition: color 0.3s;
+}
+
+.yoga-footer .footer-section ul li a:hover {
+  color: #fff689;
+}
+
+.yoga-footer .footer-logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff689;
+}
+
+.yoga-footer .footer-desc {
+  /* font-size: 14px; */
+  color: #dddddd;
+  margin-top: 10px;
+}
+
+.yoga-footer .contact-social p i {
+  margin-right: 8px;
+  color: #fff689;
+}
+
+.yoga-footer .social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  color: #cccccc;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.yoga-footer .social-icons a:hover {
+  color: #fff689;
+}
+
+.yoga-footer .copyright {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ========Top and Whatsapp Buttons=======*/
+/* FloatingButtons.css */
+.floating-buttons {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.top-button {
+  background-color: #4caf50;
+  background-color: #1d2b64;
+  color: white;
+  border: none;
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, background-color 0.3s;
+}
+
+.top-button:hover {
+  background-color: #388e3c;
+  transform: scale(1.1);
+}
+
+.whatsapp-button img {
+  width: 3.2rem;
+  height: 3.2rem;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-button:hover img {
+  transform: scale(1.1);
+}
+
+/* ClassSchedule.css */
+
+.schedule-container {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.schedule-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #2e3d49;
+}
+
+.schedule-subtitle {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.schedule-card h3 {
+  font-size: 1.5rem;
+  color: #3e4b5b;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #e2d1c3;
+  display: inline-block;
+  padding-bottom: 6px;
+}
+
+.schedule-timings p {
+  margin: 6px 0;
+  font-size: 1rem;
+  color: #444;
+  /* font-family: "Segoe UI", sans-serif; */
+}
+
+/* 404 Eroor Page Styles */
+.notfound-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  /* background: linear-gradient(to bottom right, #f5f5f5, #e8f4f8); */
+  background-color: #0f2027;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.notfound-content {
+  margin-top: 6rem;
+  max-width: 600px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.notfound-image {
+  width: 12rem;
+  margin-bottom: 20px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.notfound-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.notfound-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.notfound-btn {
+  background-color: #007b5e;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.notfound-btn:hover {
+  background-color: #009873;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .notfound-content {
+    padding: 30px 20px;
+  }
+
+  .notfound-title {
+    font-size: 2rem;
+  }
+}
+
+/* Responsive */
+@media (max-width: 767px) {
+  .carousel-btn{
+    margin: 0rem;
+  }
+  .carousel-card {
+    width: 98%;
+  }
+  .contact-info,
+  .contact-form {
+    width: 95%;
+  }
+  .schedule-section {
+    padding: 10px 5px;
+  }
+  .yoga-footer .footer-section {
+    text-align: center;
+  }
+
+  .yoga-footer .social-icons {
+    justify-content: center;
+  }
+}
