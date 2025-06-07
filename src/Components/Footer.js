@@ -5,6 +5,7 @@ import {
   brandName,
   facebook,
   instagram,
+  mapsLink,
   phoneNumber,
   youtube,
 } from "../Data/BrandData";
@@ -17,7 +18,7 @@ const YogaFooter = () => {
         <div className="row g-4">
           {/* Logo and About */}
           <div className="col-md-4 footer-section logo-section">
-            <h2 className="footer-logo">🧘 {brandName}</h2>
+            <h3 className="footer-logo">🧘 {brandName}</h3>
             <p className="footer-desc">
               Experience tranquility, health, and inner peace at our modern Yoga
               Studio. Embrace your journey with us.
@@ -74,12 +75,23 @@ const YogaFooter = () => {
           {/* Contact & Social */}
           <div className="col-md-3 footer-section contact-social">
             <h5 className="section-heading">Contact Us</h5>
-            <p>
-              <i className="fas fa-map-marker-alt"></i> {address}
-            </p>
-            <p>
-              <i className="fas fa-envelope"></i> {brandEmail}
-            </p>
+            <Link
+              to={mapsLink}
+              className="wrap-email text-decoration-none text-white"
+            >
+              <i
+                className="fas fa-map-marker-alt me-2"
+                style={{ color: "#fff689" }}
+              ></i>{" "}
+              {address}
+            </Link>
+            <Link
+              to="mailto:tadiboyinasivaramakrishna.yoga@gmail.com"
+              className="wrap-email text-decoration-none text-white"
+            >
+              <i className="fas fa-envelope me-2" style={{ color: "#fff689" }}></i>{" "}
+              {brandEmail}
+            </Link>
             <p>
               <i className="fas fa-phone-alt"></i> +{phoneNumber}
             </p>

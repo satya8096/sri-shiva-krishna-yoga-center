@@ -31,12 +31,13 @@ const TestimonialCarousel = () => {
               className="user-img"
               src={require("./../Assets/user.png")}
               alt={testimonials[current].name}
+              
             />
             <Link
               to={testimonials[current].url}
               className="user-name d-block text-decoration-none"
             >
-              {testimonials[current].name}
+             - {testimonials[current].name}
             </Link>
             <div className="stars">
               {Array.from({ length: 5 }).map((_, i) => (

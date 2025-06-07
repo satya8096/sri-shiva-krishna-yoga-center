@@ -25,7 +25,7 @@ export const galleryImages = [
 
 const YogaGallery = () => {
   return (
-    <section className="yoga-gallery-sectio">
+    <section className="overflow-hidden">
       {galleryMetaData}
       <div className="gallery-hero flex-column">
         <h2 className="text-white" data-aos="fade-left">

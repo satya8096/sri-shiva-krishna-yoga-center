@@ -4,6 +4,18 @@ import { phoneNumber } from "./../Data/BrandData";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
+  const handleNavCollapse = () => {
+    if (window.innerWidth <= 1100) {
+      const navbarToggler = document.querySelector(".navbar-toggler");
+      if (
+        navbarToggler &&
+        navbarToggler.getAttribute("aria-expanded") === "true"
+      ) {
+        navbarToggler.click();
+      }
+    }
+  };
+
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;
@@ -42,32 +54,56 @@ const Navbar = () => {
         >
           <ul className="navbar-nav gap-4 text-center">
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/">
+              <NavLink
+                className="nav-link text-white"
+                to="/"
+                onClick={handleNavCollapse}
+              >
                 Home
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/about">
+              <NavLink
+                className="nav-link text-white"
+                to="/about"
+                onClick={handleNavCollapse}
+              >
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/classes">
+              <NavLink
+                className="nav-link text-white"
+                to="/classes"
+                onClick={handleNavCollapse}
+              >
                 Classes
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/gallery">
+              <NavLink
+                className="nav-link text-white"
+                to="/gallery"
+                onClick={handleNavCollapse}
+              >
                 Gallery
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/blogs">
+              <NavLink
+                className="nav-link text-white"
+                to="/blogs"
+                onClick={handleNavCollapse}
+              >
                 Blog
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link text-white" to="/contact">
+              <NavLink
+                className="nav-link text-white"
+                to="/contact"
+                onClick={handleNavCollapse}
+              >
                 Contact
               </NavLink>
             </li>
@@ -77,7 +113,10 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="btn btn-join-now  text-dark fw-bold px-4 py-2">
+              <Link
+                to={`tel:${phoneNumber}`}
+                className="btn btn-join-now  text-dark fw-bold px-4 py-2"
+              >
                 +{phoneNumber}
               </Link>
             </li>

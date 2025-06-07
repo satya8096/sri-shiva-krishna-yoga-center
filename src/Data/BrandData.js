@@ -1,7 +1,6 @@
 export const brandName = "Sri Siva Rama Krishna Yoga Center";
 
-export const brandEmail = `tadiboyinasiva
-ramakrishna.yoga@gmail.com`;
+export const brandEmail = `tadiboyinasivaramakrishna.yoga@gmail.com`;
 
 export const phoneNumber = +919440618736;
 
