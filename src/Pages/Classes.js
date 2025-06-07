@@ -19,6 +19,10 @@ const Classes = () => {
         </p>
       </section>
 
+      <div className="text-center">
+        <img src={require("./../Assets/img22.jpeg")} width={"80%"} alt="yoga" />
+      </div>
+
       {/* Services Grid */}
       <div className="row g-4 container">
         {services.map((service, index) => (

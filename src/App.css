@@ -138,7 +138,6 @@ h6 {
   }
 }
 
-
 /* Mobile optimization */
 @media (max-width: 995px) {
   .navbar-yoga {
@@ -1570,6 +1569,28 @@ form button:hover {
   color: #aaa;
 }
 
+.video-section {
+  background: linear-gradient(to bottom, #f0f4f8, #ffffff);
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.video-overlay {
+  margin-bottom: 30px;
+}
+
+.video-wrapper {
+  margin: 0 auto;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-player {
+  width: 60%;
+  height: auto;
+  border-radius: 16px;
+}
+
 /* ========Top and Whatsapp Buttons=======*/
 /* FloatingButtons.css */
 .floating-buttons {
@@ -1739,6 +1760,9 @@ form button:hover {
 
 /* Responsive */
 @media (max-width: 767px) {
+  .video-player {
+    width: 100%;
+  }
   .carousel-btn {
     margin: 0rem;
   }

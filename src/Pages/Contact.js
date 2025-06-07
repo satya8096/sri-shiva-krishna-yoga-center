@@ -54,9 +54,13 @@ const ContactPage = () => {
           </div>
           <div className="info-item">
             <strong data-aos="fade">Email</strong>
-            <p data-aos="fade" style={{ width: "20rem", overflow: "auto" }}>
+            <Link
+              data-aos="fade wrap-email"
+              to={`mailto:${brandEmail}`}
+              className="wrap-email text-decoration-none text-dark"
+            >
               {brandEmail}
-            </p>
+            </Link>
           </div>
           <div className="info-item">
             <strong data-aos="fade">Location</strong>

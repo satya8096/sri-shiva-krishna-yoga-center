@@ -86,10 +86,13 @@ const YogaFooter = () => {
               {address}
             </Link>
             <Link
-              to="mailto:tadiboyinasivaramakrishna.yoga@gmail.com"
+              to={`mailto:${brandEmail}`}
               className="wrap-email text-decoration-none text-white"
             >
-              <i className="fas fa-envelope me-2" style={{ color: "#fff689" }}></i>{" "}
+              <i
+                className="fas fa-envelope me-2"
+                style={{ color: "#fff689" }}
+              ></i>{" "}
               {brandEmail}
             </Link>
             <p>
