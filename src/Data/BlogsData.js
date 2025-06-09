@@ -2,8 +2,7 @@ export const blogs = [
   {
     title: "The Transformative Power of Daily Yoga Practice",
     slug: "daily-yoga-practice-benefits",
-    coverImage:
-      "https://images.pexels.com/photos/2908175/pexels-photo-2908175.jpeg",
+    coverImage: require("./../Assets/The_Transformative_Power_of_Daily_Yoga_Practice.jpeg"),
     date: "2025-06-01",
     tags: ["yoga", "wellness", "mental health"],
     intro:
@@ -54,8 +53,7 @@ export const blogs = [
   {
     title: "Why Mindful Breathing Is the Gateway to Peace",
     slug: "power-of-mindful-breathing",
-    coverImage:
-      "https://images.pexels.com/photos/4056723/pexels-photo-4056723.jpeg",
+    coverImage: require("./../Assets/Why_Mindful_Breathing_Is_the_Gateway_to_Peace.jpeg"),
     date: "2025-06-02",
     tags: ["breathwork", "meditation", "mental clarity"],
     intro:
@@ -106,8 +104,7 @@ export const blogs = [
   {
     title: "Unlocking Inner Peace Through Meditation and Yoga",
     slug: "yoga-meditation-inner-peace",
-    coverImage:
-      "https://images.pexels.com/photos/3822622/pexels-photo-3822622.jpeg",
+    coverImage: require("./../Assets/Unlocking_Inner_Peace_Through_Meditation_and_Yoga.jpeg"),
     date: "2025-06-04",
     tags: ["meditation", "yoga", "mindfulness"],
     intro:
@@ -148,8 +145,7 @@ export const blogs = [
   {
     title: "Boosting Immunity Naturally with Yoga",
     slug: "immunity-yoga-benefits",
-    coverImage:
-      "https://images.pexels.com/photos/317157/pexels-photo-317157.jpeg",
+    coverImage: require("./../Assets/Boosting_Immunity_Naturally_with_Yoga.jpeg"),
     date: "2025-06-05",
     tags: ["yoga", "immunity", "natural healing"],
     intro:
@@ -190,8 +186,7 @@ export const blogs = [
   {
     title: "Yoga for Busy People: Making Time for Self-Care",
     slug: "yoga-for-busy-lifestyles",
-    coverImage:
-      "https://images.pexels.com/photos/1812964/pexels-photo-1812964.jpeg",
+    coverImage: require("./../Assets/Yoga_for_Busy_People_Making_Time_for_Self_Care.jpeg"),
     date: "2025-06-06",
     tags: ["productivity", "self-care", "time management"],
     intro:

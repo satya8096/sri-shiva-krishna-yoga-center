@@ -63,50 +63,42 @@ export const benefits = [
 
 export const services = [
   {
-    image:
-      "https://img.freepik.com/free-photo/sporty-young-woman-doing-yoga-practice-isolated-white-surface-concept-healthy-life-natural-balance-body-mental-development_231208-12535.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/hatha_yoga.avif"),
     title: "Hatha Yoga",
     desc: "Traditional yoga for balance and alignment. Ideal for beginners and stress relief.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/beautiful-young-woman-doing-yoga-outdoors-beautiful-spot-riverside_352677-59.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/power_yoga.avif"),
     title: "Power Yoga",
     desc: "High-energy yoga that builds strength, endurance, and flexibility.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/pregnancy-yoga-calm-beautiful-pregnant-woman-stretching-fitness-mat-home_116547-34677.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/Prenatal_Yoga.avif"),
     title: "Prenatal Yoga",
     desc: "Gentle and safe sessions for expecting mothers to promote relaxation and well-being.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/young-woman-sportswear-practicing-yoga-sitting-mat-lotus-position-is-engaged-meditation-with-namaste-studio_437105-1335.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/Meditation_yoga.avif"),
     title: "Meditation & Mindfulness",
     desc: "Calm your mind with guided meditation practices that improve focus and inner peace.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/beautiful-woman-standing-camel-pose-mat-doing-ustrasana-exercise-practicing-yoga-sporty-girl-wearing-black-sportswear-working-out-home-yoga-studio-with-big-window-plants_774935-1195.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/Vinyasa_Flow.avif"),
     title: "Vinyasa Flow",
     desc: "Dynamic sequences linking breath with movement. Great for flexibility and cardio.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/young-sporty-attractive-woman-practicing-yoga-doing-paschimottanasana-exercise-seated-forward-bend-pose-working-out-wearing-sportswear-black-pants-top-indoor-full-length-white-yoga-studio_656932-5299.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/Yin_Yoga.avif"),
     title: "Yin Yoga",
     desc: "Slow-paced practice for deep tissue release and enhanced joint mobility.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/young-sporty-people-with-closed-eyes-meditating-savasana-pose-floor-practicing-yoga-group-lesson-doing-corpse-exercise-mats-training-working-out-modern-yoga-studio-center_774935-1100.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/Restorative_Yoga.avif"),
     title: "Restorative Yoga",
     desc: "Deep relaxation with the support of props to restore body and mind.",
   },
   {
-    image:
-      "https://img.freepik.com/premium-photo/yoga-teacher-beginners-class-making-asana-exercises-lotus-pose-healthy-lifestyle-fitness-club-stretching-with-coach_116547-3676.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740",
+    image: require("./../Assets/Group_Yoga.avif"),
     title: "Group Yoga",
     desc: "Enjoy guided yoga with others in a positive, community-centered setting.",
   },

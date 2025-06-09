@@ -727,8 +727,7 @@ h6 {
 .classes-hero,
 .gallery-hero,
 .blog-detail-hero {
-  background: url("https://img.freepik.com/premium-photo/smiling-girl-professional-yoga-instructor-is-doing-balancing-exercises-standing-one-leg-mat-grass-park-beautiful-autumn-nature-is-visible_662046-2695.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
-    center/cover no-repeat;
+  background: url("./Assets/about_hero.avif") center/cover no-repeat;
   padding: 10rem 1rem;
   display: flex;
   align-items: center;
@@ -886,9 +885,7 @@ h6 {
       rgba(0, 0, 0, 0.248),
       rgba(0, 0, 0, 0.281)
     ),
-    url("https://img.freepik.com/free-photo/yoga-action-exercise-healthy-park_1150-4422.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
-      center/cover no-repeat;
-  /* background-attachment: fixed; */
+    url("./Assets/classes_hero.avif") center/cover no-repeat;
 }
 .live-schedule-section {
   max-width: 1000px;
@@ -974,8 +971,7 @@ h6 {
       rgba(0, 0, 0, 0.248),
       rgba(0, 0, 0, 0.281)
     ),
-    url("https://img.freepik.com/premium-photo/young-girls-yoga-outdoors-park-sunset-healthy-lifestyle_180601-1447.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
-      center/cover no-repeat;
+    url("./Assets/contact_hero.avif") center/cover no-repeat;
   color: white;
   padding: 10rem 1rem;
   text-align: center;
@@ -986,8 +982,7 @@ h6 {
       rgba(0, 0, 0, 0.248),
       rgba(0, 0, 0, 0.281)
     ),
-    url("https://img.freepik.com/premium-photo/beautiful-young-woman-practices-yoga-beach-early-morning-exercise-drinking-water-sunrise_179755-6211.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
-      center/cover no-repeat;
+    url("./Assets/blog_hero.jpg") center/cover no-repeat;
 }
 
 .contact-header h1 {
@@ -1236,8 +1231,7 @@ form button:hover {
       rgba(0, 0, 0, 0.248),
       rgba(0, 0, 0, 0.281)
     ),
-    url("https://img.freepik.com/premium-photo/young-latina-woman-yoga-position-stretching-spirituality-practice_678765-530.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
-      center/cover no-repeat;
+    url("./Assets/gallery_hero.avif") center/cover no-repeat;
 }
 .yoga-gallery-section {
   padding: 80px 20px;
@@ -1486,8 +1480,7 @@ form button:hover {
       rgba(0, 0, 0, 0.248),
       rgba(0, 0, 0, 0.281)
     ),
-    url("https://img.freepik.com/free-photo/woman-yoga-mat-relax-park-mountain-lake-calm-woman-with-closed-eyes-practicing-yoga-sitting-padmasana-pose-mat-lotus-exercise-attractive-sporty-girl-sportswear_1150-44679.jpg?uid=R191256068&ga=GA1.1.297081695.1734783164&semt=ais_items_boosted&w=740")
-      center/cover no-repeat;
+    url("./Assets/blog_detail_hero.avif") center/cover no-repeat;
 }
 .blog-detail-container {
   max-width: 900px;
