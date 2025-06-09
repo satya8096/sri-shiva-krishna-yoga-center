@@ -29,6 +29,12 @@ const socialLinks = [
     url: youtube,
     color: "#ff0000",
   },
+  {
+    name: "WhatsApp",
+    icon: "fab fa-whatsapp",
+    url: `https://wa.me/${phoneNumber}`,
+    color: "#25D366",
+  },
 ];
 
 const ContactPage = () => {

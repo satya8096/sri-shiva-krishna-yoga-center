@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router"; // make sure it's 'react-router-dom'
-import { phoneNumber } from "./../Data/BrandData";
+import { brandName, phoneNumber } from "./../Data/BrandData";
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
@@ -35,12 +35,17 @@ const Navbar = () => {
         className="container d-flex flex-column align-items-center"
         data-aos="fade-down"
       >
-        <a className="navbar-brand text-white fw-bold mb-1" href="/">
-          <i className="fas fa-spa me-2"></i>Sri Siva Rama Krishna Yoga Center
+        <a className="navbar-brand text-white fw-bold" href="/">
+          <img
+            src={require("./../Assets/yoga_logo.png")}
+            alt="logo"
+            style={{ width: "3rem" }}
+          />{" "}
+          {brandName}
         </a>
 
         <button
-          className="navbar-toggler mb-4"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#yogaNavbar"
@@ -108,7 +113,10 @@ const Navbar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <Link className="btn btn-join-now text-dark fw-bold px-4 py-2">
+              <Link
+                to={`https://wa.me/${phoneNumber}`}
+                className="btn btn-join-now text-dark fw-bold px-4 py-2"
+              >
                 Join Now
               </Link>
             </li>

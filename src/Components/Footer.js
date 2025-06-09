@@ -18,7 +18,12 @@ const YogaFooter = () => {
         <div className="row g-4">
           {/* Logo and About */}
           <div className="col-md-4 footer-section logo-section">
-            <h3 className="footer-logo">🧘 {brandName}</h3>
+            <img
+              src={require("./../Assets/yoga_logo.png")}
+              alt="logo"
+              width={"20%"}
+            />
+            <h3 className="footer-logo">{brandName}</h3>
             <p className="footer-desc">
               Experience tranquility, health, and inner peace at our modern Yoga
               Studio. Embrace your journey with us.
@@ -107,6 +112,9 @@ const YogaFooter = () => {
               </a>
               <a href={youtube}>
                 <i className="fab fa-youtube"></i>
+              </a>
+              <a href={`https://wa.me/${phoneNumber}`}>
+                <i className="fab fa-whatsapp"></i>
               </a>
             </div>
           </div>

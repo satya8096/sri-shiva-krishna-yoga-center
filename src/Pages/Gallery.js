@@ -53,6 +53,24 @@ export const galleryImages = [
   },
 ];
 
+const videos = [
+  {
+    id: 1,
+    title: "Interview with yoga instructor",
+    url: "https://www.youtube.com/embed/emQtxdsd5hg?si=TVJ1xYgaBZ6ISo0a",
+  },
+  {
+    id: 2,
+    title: "Yoga session explanation",
+    url: "https://www.youtube.com/embed/Ue3oES6oPVc?si=gO6_oTU5Xt5Qmb5d",
+  },
+  {
+    id: 3,
+    title: "Yoga session explanation",
+    url: "https://www.youtube.com/embed/k7I0FsXXMwg?si=cdQ6HpuLtpNbmgPk",
+  },
+];
+
 const YogaGallery = () => {
   return (
     <section className="overflow-hidden">
@@ -65,6 +83,32 @@ const YogaGallery = () => {
           Experience the essence of peace, posture, and presence.
         </p>
       </div>
+      <section className="youtube-section">
+        <div className="container">
+          <h3 className="section-heading">🎥 Explore Our Yoga Sessions</h3>
+          <p className="youtube-subtitle">
+            Watch calming and energizing yoga videos led by our experienced
+            instructors.
+          </p>
+
+          <div className="youtube-grid">
+            {videos.map((video) => (
+              <div key={video.id} className="youtube-card">
+                <div className="youtube-embed-container">
+                  <iframe
+                    src={video.url}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+                <h4 className="video-caption">{video.title}</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
       <section className="video-section">
         <div className="video-overlay">
           <h3 className="video-title section-heading">Our Yoga's Gallery</h3>
@@ -80,7 +124,7 @@ const YogaGallery = () => {
           </video>
         </div>
       </section>
-      <di className="yoga-gallery-section">
+      <div className="yoga-gallery-section">
         <div className="gallery-grid">
           {galleryImages.map((img, index) => (
             <div className="gallery-card" key={index} data-aos="zoom-in">
@@ -96,7 +140,7 @@ const YogaGallery = () => {
             </div>
           ))}
         </div>
-      </di>
+      </div>
     </section>
   );
 };

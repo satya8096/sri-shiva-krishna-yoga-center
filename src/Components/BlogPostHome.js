@@ -14,8 +14,8 @@ const BlogSection = () => {
         </p>
 
         <div className="blog-grid">
-          {blogs.slice(0, 3).map((post) => (
-            <div className="blog-card" key={post.id}>
+          {blogs.slice(0, 3).map((post, index) => (
+            <div className="blog-card" key={index}>
               <div className="blog-image">
                 <img src={post.coverImage} alt={post.title} />
               </div>

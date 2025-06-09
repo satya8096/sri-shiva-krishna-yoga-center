@@ -16,8 +16,8 @@ const BlogList = () => {
         </p>
       </div>
       <div className="blog-grid">
-        {blogs.map((post) => (
-          <div className="blog-card" key={post.id} data-aos="zoom-in">
+        {blogs.map((post, index) => (
+          <div className="blog-card" key={index} data-aos="zoom-in">
             <div className="blog-image">
               <img src={post.coverImage} alt={post.title} loading="lazy" />
             </div>

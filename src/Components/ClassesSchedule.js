@@ -3,6 +3,7 @@ import {
   onlineSchedule,
   offlineDays,
   offlineSchedule,
+  phoneNumber,
 } from "../Data/BrandData";
 
 const ClassesSchedule = () => {
@@ -14,6 +15,10 @@ const ClassesSchedule = () => {
       <p className="schedule-subtext" data-aos="fade">
         Stay consistent with your practice — reserve your spot now.
       </p>
+      <h5 className="text-danger">
+        Note : Online Sessions are conducted in Whatsapp Video Call, So Please
+        Contact via Whatsapp number to join online classes.
+      </h5>
 
       <div className="schedule-table" data-aos="fade">
         <div className="table-header">
@@ -29,8 +34,8 @@ const ClassesSchedule = () => {
             <div>Yoga</div>
             <div>Siva Rama Krishna</div>
             <div>
-              <a href="/contact" className="book-btn">
-                Book Now
+              <a href={`https://wa.me/${phoneNumber}`} className="book-btn">
+                Whats Video Call Sessions
               </a>
             </div>
           </div>

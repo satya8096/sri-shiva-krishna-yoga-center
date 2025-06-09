@@ -7,6 +7,7 @@ import BlogSection from "../Components/BlogPostHome";
 import { homeMetaData } from "../Data/MetaSEOdata";
 import { galleryImages } from "./Gallery";
 import { benefits } from "../Data/OthersData";
+import { phoneNumber } from "../Data/BrandData";
 
 const Home = () => {
   return (
@@ -22,7 +23,12 @@ const Home = () => {
             sessions.
           </p>
           <div className="hero-buttons">
-            <Link className="btn btn-primary">Join a Class</Link>
+            <Link
+              to={`https://wa.me/${phoneNumber}`}
+              className="btn btn-primary"
+            >
+              Join a Class
+            </Link>
             <Link to="/classes" className="btn btn-outline">
               Learn More
             </Link>
@@ -111,7 +117,7 @@ const Home = () => {
             ))}
           </div>
           <div>
-            <Link className="btn btn-warning">See More Services</Link>
+            <Link to={"/classes"} className="btn btn-warning">See More Services</Link>
           </div>
         </section>
 
@@ -171,7 +177,7 @@ const Home = () => {
       </section>
 
       <Testimonials />
-      <section class="join-section">
+      <section className="join-section">
         <div className="join-section .join-content" data-aos="fade">
           <h2 className="section-heading">Join the Yoga Journey Today</h2>
           <p>
