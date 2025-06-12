@@ -120,7 +120,7 @@ const YogaFooter = () => {
           </div>
           <div className="text-center  border-top pt-3 copyright">
             <p>
-              © 2025 {brandName}. All rights reserved. | Made with 🧘 by{" "}
+              © 2025 {brandName}. All rights reserved. | Designed with ❤️ by{" "}
               <a
                 className="text-decoration-none"
                 href="https://nexgenwebdesigns.com"

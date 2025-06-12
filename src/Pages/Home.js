@@ -35,6 +35,20 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <section className="home-poster-images">
+        <img
+          src={require("./../Assets/Home_Poster_1.jpeg")}
+          alt="yoga center in tenali"
+          loading="lazy"
+          data-aos="fade"
+        />
+        <img
+          src={require("./../Assets/Home_Poster_2.jpeg")}
+          alt="yoga center in andhra pradesh"
+          loading="lazy"
+          data-aos="fade"
+        />
+      </section>
       {/* About Yoga Center Section */}
       <section className="about-section pt-5 pb-5 overflow-hidden">
         <div className="container">
@@ -117,7 +131,9 @@ const Home = () => {
             ))}
           </div>
           <div>
-            <Link to={"/classes"} className="btn btn-warning">See More Services</Link>
+            <Link to={"/classes"} className="btn btn-warning">
+              See More Services
+            </Link>
           </div>
         </section>
 

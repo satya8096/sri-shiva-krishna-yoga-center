@@ -96,15 +96,27 @@ const ContactPage = () => {
             Pradesh 522201
           </p>
         </div>
+      </section>
 
-        <div className="contact-form d-none">
-          <h3 className="section-heading">Send a Message</h3>
-          <form>
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
-            <textarea rows="5" placeholder="Your Message" required></textarea>
-            <button type="submi">Submit</button>
-          </form>
+      <section
+        className="payment-section py-5 bg-light"
+        id="payment"
+        data-aos="fade"
+      >
+        <div className="container text-center">
+          <h3 className="mb-4 section-heading">Pay for Yoga Classes</h3>
+          <p className="lead mb-3">Scan the QR code below to pay via PhonePe</p>
+          <div className="qr-code-wrapper mb-4">
+            <img
+              src={require("./../Assets/Payment_QR_Scanner.jpeg")}
+              alt="PhonePe QR Code"
+              className="img-fluid rounded shadow"
+              style={{ maxWidth: "300px" }}
+            />
+          </div>
+          <p className="text-muted">
+            Or open PhonePe and scan to pay instantly.
+          </p>
         </div>
       </section>
 

@@ -17,15 +17,12 @@ li,
 div,
 caption,
 label {
-  /* font-family: "Josefin Sans", sans-serif; */
   font-optical-sizing: auto;
   font-weight: 500;
   font-size: 1.05rem;
   font-style: normal;
   line-height: 2rem;
-  /* word-spacing: 1.8px; */
   letter-spacing: 1px;
-  /* font-family: "Sue Ellen Francisco", cursive; */
   font-family: "Ancizar Sans", sans-serif;
 }
 
@@ -40,12 +37,9 @@ h6 {
   font-style: normal;
   letter-spacing: 1.15px;
   font-variation-settings: "wdth" 100, "YTLC" 500;
-  /* font-family: "Acme", sans-serif; */
   word-spacing: 0.1rem;
   line-height: 2rem;
   word-spacing: 0.2rem;
-  /* font-size: 1.2rem; */
-  /* color: #1e702f; */
   font-family: "Ancizar Sans", sans-serif;
 }
 
@@ -57,7 +51,6 @@ h6 {
   left: 0;
   width: 100%;
   height: 100%;
-  /* background: #d5f79f; */
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -65,22 +58,6 @@ h6 {
   justify-content: center;
   z-index: 9999;
 }
-
-.scissors-loader {
-  font-size: 4rem;
-  color: #ff69b4;
-  animation: rotate 1.2s linear infinite;
-}
-
-@keyframes rotate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 .loader-wrapper p {
   margin-top: 15px;
   font-size: 1.2rem;
@@ -228,6 +205,9 @@ h6 {
   }
 }
 
+.home-poster-images img {
+  width: 50%;
+}
 .about-section {
   background: #fefefe;
 }
@@ -1015,6 +995,13 @@ h6 {
 .contact-form h2 {
   margin-bottom: 1.5rem;
   font-size: 1.8rem;
+}
+.payment-section {
+  background: #f9f9f9;
+}
+
+.qr-code-wrapper img {
+  border: 4px solid #e0e0e0;
 }
 
 .info-item {
@@ -1810,6 +1797,9 @@ form button:hover {
 
 /* Responsive */
 @media (max-width: 767px) {
+  .home-poster-images img {
+    width: 100%;
+  }
   .video-player {
     width: 100%;
   }
